@@ -1,10 +1,24 @@
+import { makeStyles } from '@material-ui/core';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import cartActions from '../store/actions/cart';
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        color: "#fff",
+        background: "#dc3545",
+        borderRadius: '16px',
+        '&:hover': {
+            background: "#dc3545",
+            opacity: '0.7',
+        },
+      },
+  }));
 
 const Cart = () => {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
+    const classes = useStyles();
 
     let totalPrice = 0;
 
@@ -18,12 +32,14 @@ const Cart = () => {
 
     return(
         <>
-            <button type="button" className="btn bg-danger" data-bs-toggle="modal" data-bs-target="#CartModal">
+            <div className={classes.button}>
+            <button type="button" className='btn bg-danger' data-bs-toggle="modal" data-bs-target="#CartModal">
                 <span><i className="fas fa-shopping-cart text-white bg-danger"></i></span>
                 <span className="badge rounded-pill bg-danger">
                     {cart.value}
                 </span>
             </button>
+            </div>
 
             {/* Modal */}
             <div className="modal fade" id="CartModal" tabIndex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">

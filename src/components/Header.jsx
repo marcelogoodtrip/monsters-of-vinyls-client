@@ -18,6 +18,13 @@ const useStyles = makeStyles(() => ({
            borderBottom: "2px solid #dc3545",
         },
       },
+    cart: {
+        color: "#fff",
+        textDecoration: 'none',
+        '&:hover': {
+           borderBottom: "2px solid #dc3545",
+        },
+      },
   }));
 
 const Header = () => {

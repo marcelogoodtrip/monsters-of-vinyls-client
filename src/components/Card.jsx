@@ -8,6 +8,14 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       textAlign: 'center',
     },
+    button: {
+        color: "#fff",
+        background: "#dc3545",
+        '&:hover': {
+            background: "#dc3545",
+            opacity: '0.7',
+        },
+      },
   }));
 
 const Card = ({ product, children }) => {
@@ -32,7 +40,7 @@ const Card = ({ product, children }) => {
                 <Button 
                     variant="contained"
                     onClick={()=>dispatch(cartActions.Add(cart, product))}
-                    className='bg-danger text-white'
+                    className={classes.button}
                 >
                     Adicionar
                 </Button>

@@ -71,7 +71,7 @@ const Contatos = () => {
                 </div>
             }
 
-            <Button onClick={sendMessage} className="mt-2" variant="contained" color="primary">
+            <Button onClick={sendMessage} className="mt-2 bg-danger" variant="contained" color="primary">
                 Sent
             </Button>
 

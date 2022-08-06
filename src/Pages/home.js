@@ -10,8 +10,23 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '5px',
     },
     paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center'
+      textAlign: 'center',
+    },
+    head: {
+        color: "#fff",
+        backgroundColor: '#dc3545',
+        padding: '8px',
+        borderRadius: '16px 16px 0 0',
+        fontFamily: 'New Rocker',
+      },
+    list: {
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+    },
+    item: {
+        borderBottom: "2px solid #dc3545",
+        width: '80%',
     },
   }));
 
@@ -48,18 +63,20 @@ const HomePage = () => {
         <Grid container spacing={3} className={classes.root}>
             <Grid item xs={3}>
                 <Paper className={classes.paper}>
-                    <Typography variant='h5'>
-                        Categorias
+                    <Typography className={classes.head} variant='h5'>
+                        CATEGORIAS
                     </Typography>
-                    <List>
+                    <List className={classes.list}>
                         {category.map(
                             category => {
                                 return (
+                                    <div className={classes.item}>
                                     <Item
                                         key = {category.id} 
                                         name= {category.name}
                                         details={count[category.name]}
                                     />
+                                    </div>
                                 )
                             }
                         )}
