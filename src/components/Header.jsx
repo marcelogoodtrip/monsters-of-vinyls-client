@@ -12,19 +12,16 @@ const useStyles = makeStyles(() => ({
         maxWidth: '100px'
     },
     options: {
-        color: "#fff",
+        color: '#fff',
         textDecoration: 'none',
         '&:hover': {
            borderBottom: "2px solid #dc3545",
         },
       },
-    cart: {
-        color: "#fff",
-        textDecoration: 'none',
-        '&:hover': {
-           borderBottom: "2px solid #dc3545",
-        },
-      },
+    button: {
+        fontSize: '16px',
+        color: '#fff',
+    },
   }));
 
 const Header = () => {
@@ -36,10 +33,10 @@ const Header = () => {
                 Monsters of Vinyls
             </Typography>
             <Link className={classes.options} to="/">
-                <Button className="text-white">Home</Button>
+                <Button className={classes.button}>Home</Button>
             </Link>
             <Link className={classes.options} to="/contato">
-                <Button className="text-white">Contato</Button>
+                <Button className={classes.button}>Contato</Button>
             </Link>
             <Cart />   
 
