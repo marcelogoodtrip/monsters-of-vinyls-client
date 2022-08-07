@@ -1,4 +1,7 @@
-# Monsters of Vinyls is my version of a React App developed for final challenge on Bootcamp Impulso JavaScript!
+# Monsters of Vinyls is my version of a React App developed for final challenge on Bootcamp Impulso JavaScript! it simulates an online record store.
+
+![screenshot](https://user-images.githubusercontent.com/55366815/183270146-1d7d17a8-80cb-4546-a4e7-b8306eb2d7bf.png)
+
 
 # Getting Started with Create React App
 
